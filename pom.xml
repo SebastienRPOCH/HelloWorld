@@ -6,7 +6,6 @@
   <groupId>com.objis.democamel</groupId>
   <artifactId>demoroutecamel</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
 
   <name>Camel Blueprint Route</name>
   <properties>
@@ -60,16 +59,16 @@
   
 	<distributionManagement>
 		<repository>
-		<id>nexus-releases</id>
-		<url>https://localhost:8444/repository/maven-releases/</url>
-		
+			<id>JFrog-central</id>
+			<name>LFR003748-releases</name>
+			<url>https://localhost:8446/artifactory/libs-release</url>
 		</repository>
 		<snapshotRepository>
-		<id>nexus-snapshots</id>
-		<url>https://localhost:8444/repository/maven-snapshots/</url>
-		</snapshotRepository>
+			<id>JFrog-snapshots</id>
+			<name>LFR003748-snapshots</name>
+        <url>https://localhost:8446/artifactory/libs-snapshot</url>
+    </snapshotRepository>
 	</distributionManagement>
-
   
   <build>
     <defaultGoal>install</defaultGoal>
@@ -137,6 +136,7 @@
       </plugin>
 
     </plugins>
+	
   </build>
 
 </project>
